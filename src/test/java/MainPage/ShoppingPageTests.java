@@ -7,7 +7,7 @@ import org.testng.*;
 import org.testng.annotations.Test;
 
 public class ShoppingPageTests extends BaseTests {
-    ShoppingPage shoppingPage;
+
     @Test(groups ="Valid_Scenario")
     public void AddToCartTest(){
         ShoppingPage shoppingPage =ValidLogin();

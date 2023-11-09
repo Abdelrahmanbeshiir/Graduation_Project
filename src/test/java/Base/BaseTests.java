@@ -12,8 +12,8 @@ public class BaseTests {
     public LoggingPage loginPage;
     private WebDriver driver;
     public By MenuIcon= By.xpath("//button [@id='react-burger-menu-btn']");
-    private String ValidUserName="standard_user";
-    private String ValidPassword="secret_sauce";
+    final String ValidUserName="standard_user";
+    final String ValidPassword="secret_sauce";
 
     public void LoginWith(String username,String Password)
     {

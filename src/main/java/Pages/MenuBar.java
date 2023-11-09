@@ -9,7 +9,7 @@ public class MenuBar extends BasePage{
 
 
     By Menubar=By.xpath("//* [@class='bm-item-list']");
-    By Frame=By.xpath("//* [@class='bm-item-list']");
+
 
     public  MenuBar(WebDriver driver){super(driver);}
     By Logout= By.xpath("//* [@id='logout_sidebar_link']");

@@ -9,10 +9,7 @@ public class ShoppingPage extends BasePage {
     By Title=By.className("title");
     public ShoppingPage(WebDriver driver)
     {super(driver);}
-    public void AlertConfirmation()
-    {
-        driver.switchTo().alert().accept();
-    }
+
     public Boolean CheckLoginSuccessfully()
     {
         return driver.findElement(AppLogo).isDisplayed();

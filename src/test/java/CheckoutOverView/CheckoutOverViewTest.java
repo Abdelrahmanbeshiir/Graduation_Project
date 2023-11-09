@@ -1,7 +1,6 @@
 package CheckoutOverView;
 
 import Base.BaseTests;
-import Pages.BasePage;
 import Pages.ShoppingPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
