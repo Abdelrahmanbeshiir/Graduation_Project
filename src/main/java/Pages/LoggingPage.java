@@ -3,12 +3,12 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Home_Login_Page extends BasePage{
+public class LoggingPage extends BasePage{
     By UsernameField= By.id("user-name");
     By PasswordField=By.id("password");
     By LoginButton=By.xpath("//* [@type='submit']");
     By inValidLogin=By.xpath("//div [@class='error-message-container error']");
-    public Home_Login_Page(WebDriver driver)
+    public LoggingPage(WebDriver driver)
     {
         super(driver);
     }
@@ -29,6 +29,7 @@ public class Home_Login_Page extends BasePage{
     {
         return driver.findElement(inValidLogin).getText();
     }
+    public Boolean ISLoginButtonDisplayed(){return driver.findElement(UsernameField).isDisplayed();}
 
 
 }

@@ -8,10 +8,9 @@ import org.testng.annotations.Test;
 
 public class ShoppingPageTests extends BaseTests {
     ShoppingPage shoppingPage;
-    @Test(groups = "MainSenario")
+    @Test(groups ="Valid_Scenario")
     public void AddToCartTest(){
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+        ShoppingPage shoppingPage =ValidLogin();
         String itemName="Sauce Labs Backpack";
         ProductPage productPage= shoppingPage.ChooseItem(itemName);
         Assert.assertEquals(productPage.GetProductName(),itemName);

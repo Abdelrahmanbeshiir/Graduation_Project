@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 
 public class CheckoutInformationTesting extends BaseTests {
 
-    @Test
+    @Test(groups ="Valid_Scenario")
     public void ContinueWithEmptyFields()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         var Cartpage= shoppingPage.GoToCart();
         var CheckoutPage=Cartpage.ClickOnCheckOut();
         CheckoutPage.ClickContinue();
@@ -20,8 +20,8 @@ public class CheckoutInformationTesting extends BaseTests {
     @Test
     public void ContinueWithoutAddpostalCode()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         var Cartpage= shoppingPage.GoToCart();
         var CheckoutPage=Cartpage.ClickOnCheckOut();
         CheckoutPage.SetFirstName("ahmed");
@@ -33,8 +33,8 @@ public class CheckoutInformationTesting extends BaseTests {
     @Test
     public void ContinueWithoutLname()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         var Cartpage= shoppingPage.GoToCart();
         var CheckoutPage=Cartpage.ClickOnCheckOut();
         CheckoutPage.SetFirstName("ahmed");
@@ -45,8 +45,8 @@ public class CheckoutInformationTesting extends BaseTests {
     @Test
     public void ContinueWithValidData()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         var Cartpage= shoppingPage.GoToCart();
         var CheckoutPage=Cartpage.ClickOnCheckOut();
         CheckoutPage.SetFirstName("ahmed");
@@ -58,8 +58,8 @@ public class CheckoutInformationTesting extends BaseTests {
     @Test
     public void ClickingCancel()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         var Productpage=shoppingPage.ChooseItem("Sauce Labs Fleece Jacket");
         Productpage.AddItemToCart();
         var Cartpage= Productpage.GoToCart();

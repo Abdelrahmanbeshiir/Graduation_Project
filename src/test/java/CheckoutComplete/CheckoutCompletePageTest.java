@@ -10,8 +10,8 @@ public class CheckoutCompletePageTest extends BaseTests {
     @Test
     public void TestBackToHome()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         var Productpage=shoppingPage.ChooseItem("Sauce Labs Fleece Jacket");
         Productpage.AddItemToCart();
         var Cartpage= shoppingPage.GoToCart();
@@ -23,11 +23,11 @@ public class CheckoutCompletePageTest extends BaseTests {
         var CheckoutCompletePage=CheckoutOverViewPage.ClickFinish();
         Assert.assertEquals(CheckoutCompletePage.ClickBacktoHome().GetPageTitle(),"Products");
     }
-    @Test
+    @Test(groups ="Valid_Scenario")
     public void TestSuccessfulOrderMsg()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         var Productpage=shoppingPage.ChooseItem("Sauce Labs Fleece Jacket");
         Productpage.AddItemToCart();
         var Cartpage= shoppingPage.GoToCart();

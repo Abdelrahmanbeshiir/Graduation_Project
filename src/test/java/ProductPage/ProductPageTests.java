@@ -7,12 +7,10 @@ import org.testng.annotations.Test;
 
 public class ProductPageTests extends BaseTests {
 
-    @Test(groups = "MainSenario")
+    @Test(groups ="Valid_Scenario")
     public void TestAddToCart()
     {
-        loginPage.SetUserName("standard_user");
-        loginPage.SetPassword("secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+        ShoppingPage shoppingPage =ValidLogin();
         String itemName="Sauce Labs Backpack";
         ProductPage productPage= shoppingPage.ChooseItem(itemName);
         productPage.AddItemToCart();
@@ -21,9 +19,7 @@ public class ProductPageTests extends BaseTests {
     @Test
     public void TestRemoveFromCart()
     {
-        loginPage.SetUserName("standard_user");
-        loginPage.SetPassword("secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+        ShoppingPage shoppingPage =ValidLogin();
         String itemName="Sauce Labs Backpack";
         ProductPage productPage= shoppingPage.ChooseItem(itemName);
         productPage.RemoveItemFromCart();
@@ -32,8 +28,8 @@ public class ProductPageTests extends BaseTests {
     @Test
     public void TestBackToProducts()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         String itemName="Sauce Labs Onesie";
         ProductPage productPage= shoppingPage.ChooseItem(itemName);
         var Page=productPage.ClickOnBackToProduct();

@@ -7,11 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CheckoutOverViewTest extends BaseTests {
-    @Test
+    @Test(groups ="Valid_Scenario")
     public void TestClickingFinish()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+        ShoppingPage shoppingPage =ValidLogin();
         shoppingPage.GoToCart().EmptyCart();
         var Productpage=shoppingPage.ChooseItem("Sauce Labs Fleece Jacket");
         Productpage.AddItemToCart();
@@ -27,8 +26,7 @@ public class CheckoutOverViewTest extends BaseTests {
     @Test
     public void TestClickingCancel()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+        ShoppingPage shoppingPage =ValidLogin();
         var Productpage=shoppingPage.ChooseItem("Sauce Labs Fleece Jacket");
         Productpage.AddItemToCart();
         var Cartpage= shoppingPage.GoToCart();

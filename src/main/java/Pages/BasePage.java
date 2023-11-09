@@ -20,8 +20,7 @@ public class BasePage {
     }
 
 
-    public static void  ClickOn(WebElement element)
-    {
-        element.click();
-    };
+
+
+
 }

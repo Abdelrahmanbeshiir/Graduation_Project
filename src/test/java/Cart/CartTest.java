@@ -12,9 +12,7 @@ public class CartTest extends BaseTests {
     @Test(priority = 1)
     public void TestsAddItemsToCart()
     {
-
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+        ShoppingPage shoppingPage =ValidLogin();
         String itemName="Sauce Labs Backpack";
         ProductPage productPage= shoppingPage.ChooseItem(itemName);
         productPage.AddItemToCart();
@@ -30,8 +28,8 @@ SoftAssert softAssert=new SoftAssert();
     @Test(priority = 2)
     public void TestsRemoveItemFromCart()
     {
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+
+        ShoppingPage shoppingPage =ValidLogin();
         shoppingPage.GoToCart().EmptyCart();
         String itemName="Sauce Labs Onesie";
         ProductPage productPage= shoppingPage.ChooseItem(itemName);
@@ -47,11 +45,10 @@ SoftAssert softAssert=new SoftAssert();
 
 
     }
-    @Test(priority = 3)
+    @Test(priority = 3,groups ="Valid_Scenario")
     public void TestCheckoutFromCart()
     {try{
-        LoginWith("standard_user","secret_sauce");
-        ShoppingPage shoppingPage =loginPage.ClickLogin();
+        ShoppingPage shoppingPage =ValidLogin();
         var itemPage=shoppingPage.ChooseItem("Sauce Labs Fleece Jacket");
         itemPage.AddItemToCart();
         var Cartpage= shoppingPage.GoToCart();
