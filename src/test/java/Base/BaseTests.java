@@ -5,9 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.*;
-
 import java.time.Duration;
-
 public class BaseTests {
     public LoggingPage loginPage;
     private WebDriver driver;
@@ -45,7 +43,7 @@ public class BaseTests {
     public void GoHome(){
         try {
             Thread.sleep(Duration.ofMillis(50));
-        }catch (Exception e){}
+        }catch (Exception e){System.out.println("can't wait");}
         driver.get("https://www.saucedemo.com/");
     }
     @AfterClass
