@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CheckoutOverViewTest extends BaseTests {
-    @Test(groups ="Valid_Scenario")
+    @Test
     public void TestClickingFinish()
     {
         ShoppingPage shoppingPage =ValidLogin();

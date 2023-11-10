@@ -37,14 +37,21 @@ public class BaseTests {
          GoHome();
          loginPage=new LoggingPage(driver);
          driver.manage().window().maximize();
+
     }
 
     @BeforeMethod
     public void GoHome(){
         try {
-            Thread.sleep(Duration.ofMillis(50));
+            Thread.sleep(Duration.ofMillis(2000));
         }catch (Exception e){System.out.println("can't wait");}
         driver.get("https://www.saucedemo.com/");
+    }
+    @AfterMethod
+    public void Wait()
+    {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
     }
     @AfterClass
     public void Quit()

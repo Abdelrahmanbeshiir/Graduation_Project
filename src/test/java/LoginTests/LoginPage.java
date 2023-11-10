@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class LoginPage extends BaseTests {
 
 
-    @Test(groups ="Valid_Scenario",dataProviderClass = LoginDataProvider.class,dataProvider = "ValidTestData(username,password)")
+    @Test(dataProviderClass = LoginDataProvider.class,dataProvider = "ValidTestData(username,password)")
     public void TestLogin(String username,String password)
     {   LoginWith(username,password);
         ShoppingPage shoppingPage =loginPage.ClickLogin();

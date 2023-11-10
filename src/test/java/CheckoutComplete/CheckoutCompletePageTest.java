@@ -23,7 +23,7 @@ public class CheckoutCompletePageTest extends BaseTests {
         var CheckoutCompletePage=CheckoutOverViewPage.ClickFinish();
         Assert.assertEquals(CheckoutCompletePage.ClickBacktoHome().GetPageTitle(),"Products");
     }
-    @Test(groups ="Valid_Scenario")
+    @Test
     public void TestSuccessfulOrderMsg()
     {
 

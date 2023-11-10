@@ -45,7 +45,7 @@ SoftAssert softAssert=new SoftAssert();
 
 
     }
-    @Test(priority = 3,groups ="Valid_Scenario")
+    @Test(priority = 3)
     public void TestCheckoutFromCart()
     {try{
         ShoppingPage shoppingPage =ValidLogin();

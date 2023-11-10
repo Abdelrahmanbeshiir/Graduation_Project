@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class CheckoutInformationTesting extends BaseTests {
 
-    @Test(groups ="Valid_Scenario")
+    @Test
     public void ContinueWithEmptyFields()
     {
 
